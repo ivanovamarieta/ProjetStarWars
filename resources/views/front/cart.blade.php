@@ -5,7 +5,7 @@
         @include('front.partials.flash')
     @else
     @endif
-    
+
     @forelse($products as $product)
 
              <div id="categories" class="bfc">
