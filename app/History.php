@@ -24,6 +24,15 @@ class History extends Model
     {
         return $this->quantity*$this->price;
     }
+    public function scopeTotalOrder($query){
+        $result=$query->groupBy('command_at')->selectRaw('command_at,sum(quantity*price) as totalorder')->get();
+        $arraytotalorder=array();
+        foreach($result as $line){
+            $date= strval($line->command_at);
+            $arraytotalorder[$date]=$line->totalorder;
+        }
+        return $arraytotalorder;
+    }
 
 }
 

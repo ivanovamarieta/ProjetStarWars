@@ -8,12 +8,13 @@
 
              <table>
                  <tr>
-                     {{trans('app.Date')}} : {{$item->command_at->format('d m Y H:m:s')}} |
+                     {{trans('app.Date')}} : {{$item->command_at->format('Y m d H:m:s')}} |
                      {{trans('app.NameCustomer')}} : {{$item->customer->user->name}}
-
+                     <?php echo $totalcommand[strval($item->command_at)] ?>
                  </tr>
 
-                 <tr><th>{{trans('app.ProductName')}}</th>
+                 <tr>
+                     <th>{{trans('app.ProductName')}}</th>
                      <th>{{trans('app.Price')}}</th>
                      <th>{{trans('app.Quantity')}}</th>
                      <th>{{trans('app.Total')}}</th>
@@ -30,16 +31,8 @@
 
                  @endforelse
              </table>
-
          </tr>
      </table>
-
-
-
-
-
-
-
 
 
 @stop

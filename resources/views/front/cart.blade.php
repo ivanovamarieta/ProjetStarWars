@@ -28,9 +28,7 @@
     @empty
                 <p>{{trans('app.YourCartIsEmpty')}}</p>
     @endforelse
+                <p class="total">{{$cartTotal}}</p>
 
-                 <p class="total">{{$cartTotal}}</p>
-
-                 <a href="{{url('command')}}" > <button >{{trans('app.FinishCommand')}}</button></a>
-
+                <a href="{{url('command')}}" > <button >{{trans('app.FinishCommand')}}</button></a>
 @stop

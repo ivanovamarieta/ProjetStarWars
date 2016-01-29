@@ -36,7 +36,6 @@ class FrontController extends Controller
             ->orderBy('published_at','DESC')
             ->paginate(10);
 
-
         $title="Welcome Home page";
 
         return view('front.index',compact('products','title'));
@@ -69,7 +68,7 @@ class FrontController extends Controller
       ]);
 
       $content=$request->input('content');
-      Mail::send('emails.contact',compact('content'), function($m) use($request){
+      Mail::send('front.contact',compact('content'), function($m) use($request){
           $m->from($request->input('email'),'Client');
           $m->to(env('EMAIL_TECH'),'admin')->subject('Contact e-boutique');
       });
@@ -113,8 +112,9 @@ class FrontController extends Controller
                     'status'=>'finalized'
                 ]);
 
-                $command->delete();
-        }
+                $item->delete();
+            }
+
         return redirect('/');
     }
 
@@ -122,7 +122,8 @@ class FrontController extends Controller
     {
         $history = History::all()
         ->sortByDesc('command_at');
+        $totalcommand=History::TotalOrder();
 
-        return view('admin.history',compact('history'));
+        return view('admin.history',compact('history','totalcommand'));
     }
 }
