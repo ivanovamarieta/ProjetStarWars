@@ -1,4 +1,4 @@
-<nav id="navigation" role="navigation"  class="fr">
+<nav id="navigation" role="navigation"  class="fr mtl mtl">
     <ul class="pam">
             <li><a href='{{url('/')}}'>Accueil</a></li>
         @forelse($categories as $category)

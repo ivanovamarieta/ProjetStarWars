@@ -11,7 +11,8 @@
 </head>
 <body>
 
-<header id="header" role="banner" class="line pam">
+<header id="header" role="banner" class="grid-2">
+    <div id="logo"><img src="{{url('assets/images/logo.jpg')}}" width="230" ></div>
     <nav id="navigation" role="navigation" class="txtcenter">
       <ul class="navigation">
           <li><a href="{{url('/')}}">{{trans('app.backHome')}}</a></li>
@@ -29,8 +30,12 @@
     </div>
 
 </div>
-<footer id="footer" role="contentinfo" class="line pam txtcenter">
-    @include('partials.nav_footer')
+<footer id="footer" role="contentinfo" class="line pas txtcenter">
+    <ul class="center" >
+        <li><a href='{{url('/')}}'>Accueil</a></li>
+        <li><a href='{{url('mentions/')}}'>Mentions</a></li>
+        <li><a href='{{url('contact/')}}'>Contact</a></li>
+    </ul>
 </footer>
 </body>
 </html>

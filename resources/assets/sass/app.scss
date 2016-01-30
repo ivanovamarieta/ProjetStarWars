@@ -1,14 +1,16 @@
 
 body{
   background: url("/assets/images/theme.jpg")no-repeat ;
-  background-position:center 0  ;
+  background-position: center 0;
   background-size: cover;
+  background-attachment: fixed;
   background-color: #000;
 }
 
 header{
   background-color: white;
 }
+
 #logo{
   margin-left: 16%;
   width: 250px;
@@ -28,24 +30,28 @@ h2{
 nav{
   text-transform: uppercase;
   font-size: 14px;
-  width:700px;
+  margin-right: 16%;
+  margin-top: 20%;
 }
 nav ul{
   display-list: none;
 }
 nav ul li{
   display: inline-block;
-  margin: auto 1em ;
+
 
 }
 nav ul li a{
   color: #262626;
   font-weight: normal;
   text-decoration: none;
+  padding: 0.4em 1.2em;
+  border-radius: 3px;
 }
 
 nav a:hover{
-
+background-color: #080808;
+  color: deepskyblue;
 }
 
 .abstract{
@@ -102,31 +108,28 @@ nav a:hover{
   text-decoration: underline;
 }
 
+
+
 footer{
   padding:0;
   width: 100%;
-  height: 50px;
+  height: 40px;
   background-color: whitesmoke;
 }
-#navigation-footer{
+
+footer ul{
+  list-style: none;
+}
+
+footer ul li{
+  margin:  auto 1em;
+  display: inline-flex;
+}
+
+footer ul li a{
+  color: #262626;
   font-size: 12px;
   text-transform: uppercase;
-  height: 50px;
-  line-height: 50px;
-
-}
-#navigation-footer ul {
-}
-
-#navigation-footer ul li{
-  margin:  auto 1em;
-}
-
-#navigation-footer a{
-  color: #262626;
-  font-weight: bold;
-}
-#navigation-footer a:hover{
   text-decoration: none;
 }
 

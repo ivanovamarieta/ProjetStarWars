@@ -12,10 +12,9 @@
 </head>
 <body>
 
-<header id="header" role="banner" class="center">
-
-    @include('partials.nav')
-    <div id="logo"><img src="{{url('assets/images/logo.jpg')}}" width="250" ></div>
+<header id="header" role="banner" class="grid-2">
+    <div id="logo"><img src="{{url('assets/images/logo.jpg')}}" width="230" ></div>
+   @include('partials.nav')
 </header>
 <div id="main" role="main" class="line pam">
 
@@ -26,8 +25,12 @@
 
 
 </div>
-<footer id="footer" role="contentinfo" class="line pam txtcenter">
-@include('partials.nav_footer')
-    </footer>
+<footer id="footer" role="contentinfo" class=" line pas txtcenter">
+    <ul class="center inbl" >
+        <li><a href='{{url('/')}}'>Accueil</a></li>
+        <li><a href='{{url('mentions/')}}'>Mentions</a></li>
+        <li><a href='{{url('contact/')}}'>Contact</a></li>
+    </ul>
+</footer>
 </body>
 </html>
