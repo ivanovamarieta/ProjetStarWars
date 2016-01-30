@@ -80,7 +80,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::group([
         'middleware'=>'auth'],function()
     {
-
         Route::get('command','FrontController@commandShow');
         Route::get('storeCommand','FrontController@storeCommand');
     });

@@ -45,5 +45,6 @@ return[
     'Login'=>'Connection',
     'RememberMe'=>'Se souvenir de moi',
     'Status'=>'Statut',
-    'DatePublishedAt'=>'Date de publication'
+    'DatePublishedAt'=>'Date de publication',
+    'TotalCommand'=>'Total de la commande'
 ];

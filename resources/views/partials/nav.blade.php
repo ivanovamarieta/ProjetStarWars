@@ -1,4 +1,4 @@
-<nav id="navigation" role="navigation" class="txtcenter">
+<nav id="navigation" role="navigation"  class="fr">
     <ul class="pam">
             <li><a href='{{url('/')}}'>Accueil</a></li>
         @forelse($categories as $category)
@@ -19,7 +19,7 @@
             </a></li>
 
         @if($user=Auth::user())
-            <li> Bienvenue {{$user->name}} </li>
+            <li>  {{$user->name}},vous êtes connecté </li>
             @else
             <li></li>
             @endif

@@ -12,8 +12,10 @@
 </head>
 <body>
 
-<header id="header" role="banner" class="line pam">
+<header id="header" role="banner" class="center">
+
     @include('partials.nav')
+    <div id="logo"><img src="{{url('assets/images/logo.jpg')}}" width="250" ></div>
 </header>
 <div id="main" role="main" class="line pam">
 

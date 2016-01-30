@@ -5,12 +5,11 @@
         $total=0?>
         @forelse($history as $key => $item)
         <?php if($memoCommand != $item->command_at) : ?>
-
-             <table>
-                 <tr>
+             <table class="table_histories">
+                 <tr id="table_history_items">
                      {{trans('app.Date')}} : {{$item->command_at->format('Y m d H:m:s')}} |
                      {{trans('app.NameCustomer')}} : {{$item->customer->user->name}}
-                     <?php echo $totalcommand[strval($item->command_at)] ?>
+                     {{trans('app.TotalCommand')}} :  <?php echo $totalcommand[strval($item->command_at)] ?> €
                  </tr>
 
                  <tr>
@@ -30,6 +29,8 @@
                  <th>{{$item->status}}</th></tr>@empty
 
                  @endforelse
+
+
              </table>
          </tr>
      </table>
