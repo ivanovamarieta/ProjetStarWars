@@ -2,26 +2,28 @@
 
 @section('content')
     @forelse($products as $product)
-       <div id="categories" class="bfc">
+        <div id="products" class="grid-1-2 bfc">
 
             @if($picture = $product->picture)
                 <figure class="fl figure">
-                    <a href="{{url('product', $product->id)}}"><img class="img_small fl" width="200"  src="{{url('uploads',$picture->uri)}}" ></a>
+                    <a href="{{url('prod', $product->id)}}"><img class="img_small" width="200"  src="{{url('uploads',$picture->uri)}}" ></a>
                 </figure>
             @endif
 
-                <h2 class=""><a href="{{url('product', $product->id)}}">{{$product->name}}</a></h2>
+           <div id="description_product">
 
-            <p class="abstract"> Déscription: {{$product->abstract}}</p>
+           <h2 class="name"><a href="{{url('prod', $product->id)}}">{{$product->name}}</a></h2>
 
-            <p class="categorie">
+           <p class="abstract">{{trans('app.Abstract')}}: {{$product->abstract}}</p>
+
+           <p class="category">
                 @if($cat=$product->category)
 
-                    Catégorie: {{$cat->title}}
+                   {{trans('app.Category')}}: {{$cat->title}}
                 @endif
             </p>
 
-            <p class="price">Prix: {{$product->price}} € </p>
+            <p class="price">{{trans('app.Price')}}: {{$product->price}} € </p>
 
             <p class="tags"> {{trans('app.tag')}}
                 @forelse($product->tags as $tag)
@@ -30,9 +32,8 @@
                     {{trans('app.noTag')}}
                 @endforelse
             </p>
-
-                <p class="published_at">Date de publication: {{$product->published_at->format('d m Y')}}</p>
-
+            <p class="published_at">{{trans('app.DatePublished')}}: {{$product->published_at->format('d m Y')}}</p>
+         </div>
         </div>
     @empty
         <p>No product</p>

@@ -1,7 +1,7 @@
 <?php
 
 return[
-    'tag'=>'Mot clé:',
+    'Tag'=>'Mot clé:',
     'noTag'=>'Aucun mot clé',
     'home'=>'Accueil',
     'message'=>'Votre message a bien été envoyé',
@@ -28,7 +28,7 @@ return[
     'addImage'=>'Ajouter une image',
     'selectQuantity'=>'Quantité',
     'select'=>'selectionner',
-    'PriceTotalProduct'=>'Prix total article',
+    'PriceTotalProduct'=>'Total article',
     'YourCartIsEmpty'=>'Votre panier est vide',
     'Total'=>'Total',
     'Delete'=>'Supprimer',
@@ -46,5 +46,13 @@ return[
     'RememberMe'=>'Se souvenir de moi',
     'Status'=>'Statut',
     'DatePublishedAt'=>'Date de publication',
-    'TotalCommand'=>'Total de la commande'
+    'TotalCommand'=>'Total de la commande',
+    'eShop'=>'Votre boutique en ligne accessoires Star Wars',
+    'NoProduct'=>'Le produit n\'existe pas',
+    'Description'=>'Description',
+    'DatePublished'=>'Date de publication',
+    'LegalPolicy'=>'Mentions légales',
+    'Contact'=>'Contact',
+    'Home'=>'Accueil',
+
 ];

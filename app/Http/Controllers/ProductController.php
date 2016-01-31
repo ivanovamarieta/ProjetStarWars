@@ -44,6 +44,7 @@ class ProductController extends Controller
         $product->tags()->attach($request->input('tags'));
 
 
+
         if(!is_null($request->file('thumbnail'))){
 
             $im = $request->file('thumbnail');
@@ -93,11 +94,11 @@ class ProductController extends Controller
             'name'=>'required|string',
             'abstract'=>'required|max:255',
             'content'=>'max:255',
-            'price'=>'required|numeric',
+            'price'=>'required|decimal(7,2)',  //ici
             'quantity'=>'numeric',
             'published_at'=>'in:true',
             'status'  => 'in:opened,closed',
-            'thumbnail'=>'image|max:3000' // 3Mo
+            'thumbnail'=>'image|max:5000' // 3Mo
         ]);
 
             $product=Product::find($id);
@@ -151,7 +152,7 @@ class ProductController extends Controller
         }
 
         $product->delete();
-        return back()->with(['message'=>'product deleted']);
+        return back()->with(['message'=>'Product deleted']);
     }
 }
 

@@ -1,12 +1,9 @@
 @extends ('layouts.admin')
 @section('content')
-    @if(Session::has('message'))
-        @include('front.partials.flash')
-    @else
+
 
     <form method="POST" action="{{url('product')}}" enctype="multipart/form-data">
         {!!csrf_field()!!}
-        {{method_field('PUT')}}
 
         <div class="grid-2">
             <div>
@@ -22,7 +19,7 @@
                 </div>
 
                 <div class="content">
-                    <label class="label" for="tags[]">{{trans('app.Tags')}}</label>
+                    <label class="label" for="tags">{{trans('app.Tags')}}</label>
                     <select id="tags" name="tags[]">
                         @foreach($tags as $id=>$name)
                             <option value="{{$id}}">{{$name}}</option>
@@ -86,7 +83,7 @@
                        @if($errors->has('thumbnail'))<span class="error">{{$errors->first('thumbnail')}}</span>@endif
                 </div>
 
-                <div class="content">
+                <div class="form-submit">
                         <input type="submit" class="button" value="{{trans('app.add')}}">
                 </div>
             </div>

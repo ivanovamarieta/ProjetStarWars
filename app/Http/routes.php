@@ -75,6 +75,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('product', 'ProductController');
         Route::get('product/status/{id}','ProductController@changeStatus');
         Route::get('history','FrontController@showHistoryAdmin');
+
     });
 
     Route::group([

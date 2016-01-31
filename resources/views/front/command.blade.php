@@ -1,29 +1,30 @@
 @extends('layouts.master')
 @section('content')
 
+    <div id="command" class="pam">
     @forelse($products as $product)
-        <div id="categories" class="bfc">
+        <div id="command_item" class="bfc">
 
-            <a href="#"> <img src="{{url('uploads',$product->product->picture->uri)}}" width="100"></a>
+                <figure id="item" class="fl ">
+                <a href="#"> <img class="fl" src="{{url('uploads',$product->product->picture->uri)}}"></a>
+                </figure>
+            <div id="item_description" class="flex-container mas">
 
-            <h2><a href="{{url('product',[$product->id,'edit'])}}">{{$product->product->name}}</a></h2>
+                <h4 class="name_item"><a href="{{url('product',[$product->id,'edit'])}}">{{$product->product->name}}</a></h4>
 
-            <p class="quantity"> {{trans('app.Quantity')}}: {{$quantity=$product->quantity}}</p>
+                <p class="quantity_item"> {{trans('app.Quantity')}}: {{$quantity=$product->quantity}}</p>
 
-            <p class="price"> {{trans('app.Price')}}: {{$price=$product->price}} €
-                <span class="price-product-total"> {{trans('app.PriceTotalProduct')}} : {{$total=$quantity*$price}} € </span>
-            </p>
+                <p class="price_item"> {{trans('app.Price')}}: {{$price=$product->price}} €
+                    <p class="price-product-total"> {{trans('app.PriceTotalProduct')}} : {{$total=number_format($quantity*$price,2,',','')}} € </p>
+                </p>
+            </div>
         </div>
     @empty
         <p>{{trans('app.YourCartIsEmpty')}}</p>
     @endforelse
 
-    <p class="">{{trans('app.Total')}}: {{$cartTotal}} € </p>
+    <p class="total_cart">Total de votre commande: {{$cartTotal=number_format($cartTotal,2,',','')}} € </p>
 
-
-    <a href="{{url('storeCommand')}}" > <button >{{trans('app.FinishCommand')}}</button></a>
-
-
-
-
+    <a href="{{url('storeCommand')}}" > <button class="button_select" >{{trans('app.FinishCommand')}}</button></a>
+</div>
 @stop

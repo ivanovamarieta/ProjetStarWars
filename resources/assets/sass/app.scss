@@ -12,25 +12,29 @@ header{
 }
 
 #logo{
-  margin-left: 16%;
+  margin-left: 17%;
   width: 250px;
 }
 .container{
   padding: 2em;
-  margin: auto 15%;
+  margin: auto 14%;
   min-height: 530px;
   height: auto;
-  background-color: white;
+  background-color: ghostwhite;
 }
 h2{
   margin: 0.5em;
-  font-size: 1.2em;
+  font-size: 1.3em;
+}
+h3{
+  padding-top: 0.5em;
+  margin-left: 6%;
 }
 
 nav{
   text-transform: uppercase;
-  font-size: 14px;
-  margin-right: 16%;
+  font-size: 13px;
+  margin-left:1%;
   margin-top: 20%;
 }
 nav ul{
@@ -38,59 +42,97 @@ nav ul{
 }
 nav ul li{
   display: inline-block;
-
-
 }
 nav ul li a{
   color: #262626;
   font-weight: normal;
   text-decoration: none;
-  padding: 0.4em 1.2em;
+  padding: 0.4em 1em;
   border-radius: 3px;
 }
+ .user{
+  color:deepskyblue;
+  border-left: 1px dotted deepskyblue;
+   padding-left: 1em;
+}
+ .login {
+   background-color: #080808;
+   color: deepskyblue;
+ }
 
 nav a:hover{
 background-color: #080808;
   color: deepskyblue;
 }
 
-.abstract{
-  margin: 0.3em;
-  font-size: 0.8em;
+#products{
+  border-bottom: dashed 1px #cccccc;
+}
+#description_product{
+  margin:10px;
+  padding: 20px 30px;
+  background-color: white;
+}
+#select_product {
+  background-color: white;
+  width: 33%;
+  float: right;
+  margin: 10px;
+  padding: 20px 30px;
+}
+figure{
+  height: 250px;
+  width: 250px;
+  background-color:#eeeeee;
+  padding: 3em 1em;
+  margin: 10px auto;
 }
 
-#categories{
-  margin-bottom:20px;
+.abstract{
+  margin: 0.7em;
+  font-size: 1em;
 }
-.img_small fl{
-  width: 250px;
+
+.name a{
+  margin-bottom: 1em;
+  text-decoration: none;
+  color:deepskyblue;
+}
+.img_small{
+  width: 260px;
   height:auto;
 }
-.img_big fl{
-  width: 330px;
+#show_product{
+  width: 560px;
   height: auto;
 }
-.categorie{
-  margin: 0.2em;
+
+.category{
+  margin: 0.7em;
   text-transform: uppercase;
-  font-size: 0.7em;
-  font-weight: bold ;
+  font-size: 0.9em;
+
 }
 .price{
-  margin: 0.2em;
-  font-size: 0.7em;
+  margin: 0.8em;
+  font-size: 0.9em;
   font-weight: bold ;
 }
 .published_at{
-  margin: 0.2em;
-  font-size:0.7em;
+  margin: 0.7em;
+  font-size:0.9em;
+  color: teal;
 }
 
 .tags{
-  margin: 0.2em;
-  font-size:0.7em;
-  text-transform:uppercase;
+  margin: 0.7em;
+  font-size:0.9em;
+  text-transform: capitalize;
 }
+#quantity{
+  margin-left: 1.2em;
+}
+
 .pagination{
   list-style:none;
   text-align: center;
@@ -107,8 +149,6 @@ background-color: #080808;
 .pagination li a:hover, .pagination li a:active{
   text-decoration: underline;
 }
-
-
 
 footer{
   padding:0;
@@ -129,8 +169,12 @@ footer ul li{
 footer ul li a{
   color: #262626;
   font-size: 12px;
+  font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
+}
+footer ul li a:hover{
+  color: deepskyblue;
 }
 
 .button{
@@ -184,15 +228,6 @@ footer ul li a{
   border: 1px solid  #c1e2b3
 }
 
-.button_delete{
-  background-color: #f4645f;
-  border-radius: 4px;
-  padding: 0.4em 0.8em;
-  color: white;
-  border: 1px solid #c1e2b3;
-  text-transform: uppercase;
-  font-size: 0.9em;
-}
 
 .price-product-total{
   font-weight: bold;
@@ -205,6 +240,87 @@ footer ul li a{
   border: 1px solid white;
   padding: 1em;
 }
+.alert p{
 
+  text-align: center;
+}
+.alert a{
+  color: deepskyblue;
+  text-decoration: none;
+  background-color: white;
+  padding: 0.5em 2em;
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px #aaa;
+}
 
+#cart_item{
+  background-color: white;
+  padding: 1em;
+  border-bottom: 1px dashed #cccccc;
+}
 
+#cart{
+  background-color: white;
+}
+#item{
+  height: 150px;
+  width: 150px;
+  padding: 2em 0.4em;
+}
+#item_description{
+  margin-left: 1em;
+  padding-left: 1.5em;
+  width: 30%;
+}
+
+h4 a{
+  font-size: 0.9em;
+  font-weight: bold;
+  color: deepskyblue;
+  text-decoration: none;
+}
+h4 a:hover{
+  text-decoration: underline;
+  color: deepskyblue;
+}
+.name_item a{
+  margin:0.5em;
+}
+.quantity_item{
+  font-size: 1em;
+  margin: 0.5em;
+}
+.price_item{
+  font-size: 1em;
+  margin: 0.5em 1em;
+  float: left;
+}
+.price-product-total{
+  font-size: 1em;
+  font-weight: bold;
+  margin:auto  0.5em;
+}
+
+.button_delete{
+  background-color: white;
+  border-radius: 4px;
+  padding: 0.4em 0.8em;
+  margin: 0.5em;
+  color: #d43f3a;
+  border: 1px solid #d43f3a;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+.button_delete:hover{
+  background-color: #d43f3a;
+  color: white;
+}
+
+#command{
+  background-color: white;
+}
+#command_item{
+  background-color: white;
+  padding: 1em;
+  border-bottom: 1px dashed #cccccc;
+}
