@@ -55,6 +55,11 @@ class FrontController extends Controller
         return view('front.category', compact('products','title'));
     }
 
+    public function showMentions(){
+        $title="Mentions Légales";
+        return view('front.mentions', compact('title'));
+    }
+
     public function showContact(){
         $title="Page Contact";
         return view('front.contact',compact('title'));

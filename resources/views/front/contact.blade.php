@@ -1,6 +1,7 @@
 @extends ('layouts.master')
 @section('content')
 <div id="contact" class="bfc">
+    <h4> Contactez-nous: </h4>
     @if(Session::has('message'))
 
         @include('front.partials.flash')

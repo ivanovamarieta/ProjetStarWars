@@ -2,6 +2,8 @@
 @section('content')
 
     <div id="login" class="bfc">
+
+        <h4> Connectez-vous: </h4>
         <form method="POST" action="{{url('login')}}">
             {!!csrf_field()!!}
 

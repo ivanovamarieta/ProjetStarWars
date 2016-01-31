@@ -61,6 +61,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('storeContact','FrontController@storeContact');
     Route::any('login','LoginController@login');
     Route::get('logout', 'LoginController@logout');
+    Route::get('mentions','FrontController@showMentions');
 
 
 
