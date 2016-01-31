@@ -11,7 +11,7 @@
         @if(Auth::check())
             <li><a class="login" href='{{url('/logout')}}'>Logout</a></li>
             @else
-            <li><a href='{{url('/login')}}'>Login</a></li>
+            <li><a class="login" href='{{url('/login')}}'>Login</a></li>
         @endif
 
 

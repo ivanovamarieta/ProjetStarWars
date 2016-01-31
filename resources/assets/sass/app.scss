@@ -84,7 +84,7 @@ figure{
   height: 250px;
   width: 250px;
   background-color:#eeeeee;
-  padding: 3em 1em;
+  padding: 3em 2em;
   margin: 10px auto;
 }
 
@@ -131,6 +131,47 @@ figure{
 }
 #quantity{
   margin-left: 1.2em;
+}
+
+#contact{
+  background-color: white;
+  padding: 1em;
+  border-bottom: 1px dashed #cccccc;
+}
+.label{
+  margin:  1em auto;
+  font-size: inherit;
+}
+
+.input-text{
+width: 40%;
+  height: 2.5em;
+  color: #262626;
+  border: 1px solid #cccccc;
+  background-color: white;
+  border-radius: 4px;
+}
+.text-area{
+  width: 40%;
+  color: #262626;
+  border: 1px solid #cccccc;
+  background-color: white;
+  border-radius: 4px;
+}
+
+#login{
+  background-color: white;
+  padding: 1em;
+  border-bottom: 1px dashed #cccccc;
+}
+
+.password{
+  width: 40%;
+  height: 2.5em;
+  color: #262626;
+  border: 1px solid #cccccc;
+  background-color: white;
+  border-radius: 4px;
 }
 
 .pagination{
