@@ -1,5 +1,10 @@
 @extends('layouts.master')
 @section('content')
+    @if(Session::has('message'))
+
+        @include('front.partials.flash')
+    @else
+    @endif
 
     <div id="login" class="bfc">
 

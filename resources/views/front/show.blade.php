@@ -1,5 +1,10 @@
 @extends('layouts.master')
 @section('content')
+    @if(Session::has('message'))
+
+        @include('front.partials.flash')
+    @else
+    @endif
 
     <div id="product_show" class="grid-2-1 bfc"></div>
     <div>
@@ -32,16 +37,17 @@
              {!!csrf_field()!!}
 
             <div class="content">
-                    <label class="label" for="quantity">{{trans('app.selectQuantity')}} </label>
-                    <select name="quantity" id="quantity">
+
+                    <select name="quantity" id="quantity" class="quantity_select">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     </select>
+                    <label class="label" for="quantity">{{trans('app.selectQuantity')}} </label>
             </div>
                     <input type="hidden" name="product_id" id="product_id" value="{{$product->id}}">
-                    <input type="submit" class="button_select" value="{{trans('app.select')}}">
+                    <input type="submit" class="button_select_product" value="{{trans('app.select')}}">
             </form>
          </div>
     </div>

@@ -54,5 +54,7 @@ return[
     'LegalPolicy'=>'Mentions légales',
     'Contact'=>'Contact',
     'Home'=>'Accueil',
-
+    'Action'=>'Action',
+    'Delete'=>'Supprimer',
+    'noCat'=>'Aucune catégorie'
 ];

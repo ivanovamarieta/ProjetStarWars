@@ -1,9 +1,13 @@
 @extends ('layouts.admin')
 @section('content')
+    @if(Session::has('message'))
 
+        @include('front.partials.flash')
+    @else
+        @endif
+<div id="dashboard" class="pam">
     <a class="button" href="{{url('product/create')}}">{{trans('app.addProduct')}}</a>
-
-    <table class="prod_table">
+    <table id="prod_table"  >
         <tr class="table_categories">
             <th>{{trans('app.Status')}}</th>
             <th>{{trans('app.ProductName')}}</th>
@@ -16,11 +20,11 @@
         </tr>
 
     @forelse($products as $product)
-        <tr class="table_list_products">
+        <tr class="table_list_products" style="background-color: white; font-size: 0.8em">
 
             <th><a class="btn btn-{{$product->status}}" href="{{url('product',['status',$product->id])}}">{{$product->status}}</a></th>
             <th><a href="{{url('product',[$product->id,'edit'])}}">{{$product->name}}</a></th>
-            <th>{{$product->price}}</th>
+            <th>{{$product->price}} € </th>
             <th>{{$product->quantity}}</th>
             <th>{{$product->published_at->format('d m Y')}}</th>
             <th>{{($cat=$product->category)? $cat->title: 'non catégorisé'}}</th>
@@ -33,11 +37,12 @@
                 <form method="POST" action="{{url('product',$product->id)}}">
                   {{ csrf_field() }}
                  <input type="hidden" name="_method" value="delete">
-                 <input class="button_delete" type="submit" value="delete">
+                 <input class="button_delete" type="submit" value="{{trans('app.Delete')}}">
                 </form>
             </th>
          </tr>
     @empty
     @endforelse
     </table>
+</div>
 @stop

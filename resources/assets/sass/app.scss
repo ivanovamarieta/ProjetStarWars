@@ -7,6 +7,8 @@ body{
   background-color: #000;
 }
 
+/* HEADER */
+
 header{
   background-color: white;
 }
@@ -37,6 +39,8 @@ nav{
   margin-left:1%;
   margin-top: 20%;
 }
+/* NAVIGATION */
+
 nav ul{
   display-list: none;
 }
@@ -64,6 +68,8 @@ nav a:hover{
 background-color: #080808;
   color: deepskyblue;
 }
+
+/* PAGE HOME, CATEGORIES */
 
 #products{
   border-bottom: dashed 1px #cccccc;
@@ -102,6 +108,10 @@ figure{
   width: 260px;
   height:auto;
 }
+
+
+/* PAGE SHOW PRODUCT */
+
 #show_product{
   width: 560px;
   height: auto;
@@ -111,13 +121,13 @@ figure{
   margin: 0.7em;
   text-transform: uppercase;
   font-size: 0.9em;
-
 }
 .price{
   margin: 0.8em;
   font-size: 0.9em;
   font-weight: bold ;
 }
+
 .published_at{
   margin: 0.7em;
   font-size:0.9em;
@@ -129,9 +139,11 @@ figure{
   font-size:0.9em;
   text-transform: capitalize;
 }
-#quantity{
-  margin-left: 1.2em;
+.quantity_select{
+  margin-left: 1.5em;
 }
+
+/* CONTACT */
 
 #contact{
   background-color: white;
@@ -144,15 +156,17 @@ figure{
 }
 
 .input-text{
-width: 40%;
+width: 250px;
   height: 2.5em;
   color: #262626;
   border: 1px solid #cccccc;
   background-color: white;
   border-radius: 4px;
 }
+
+/* LOGIN */
 .text-area{
-  width: 40%;
+  width:250px;
   color: #262626;
   border: 1px solid #cccccc;
   background-color: white;
@@ -165,20 +179,23 @@ width: 40%;
   border-bottom: 1px dashed #cccccc;
 }
 
-#mentions{
-  background-color: white;
-  padding: 1em;
-  border-bottom: 1px dashed #cccccc;
-}
-
 .password{
-  width: 40%;
+  width: 250px;
   height: 2.5em;
   color: #262626;
   border: 1px solid #cccccc;
   background-color: white;
   border-radius: 4px;
 }
+
+/* MENTIONS*/
+
+#mentions{
+  background-color: white;
+  padding: 1em;
+  border-bottom: 1px dashed #cccccc;
+}
+/* PAGINATION */
 
 .pagination{
   list-style:none;
@@ -188,7 +205,6 @@ width: 40%;
   display:inline-block;
   padding: 5px;
   margin: auto 5px;
-
 }
 .pagination li a{
   text-decoration: none;
@@ -196,6 +212,8 @@ width: 40%;
 .pagination li a:hover, .pagination li a:active{
   text-decoration: underline;
 }
+
+/* FOOTER*/
 
 footer{
   padding:0;
@@ -224,20 +242,28 @@ footer ul li a:hover{
   color: deepskyblue;
 }
 
+/* DASHBOARD */
+
+#dashbord{
+  background-color: white;
+  padding: 1em;
+  border-bottom: 1px dashed #cccccc;
+}
+
 .button{
-  background-color: #67b168;
-  padding: 0.5em 1.5em;
+  background-color: white;
+  padding: 0.5em 1.3em;
   text-transform: uppercase;
   margin: 1em auto ;
   border-radius: 4px;
   text-decoration: none;
-  border:1px solid #67b168;
-  box-shadow: inset 1px 1px 0 #99cb84;
-  color:white;
+  border:1px solid deepskyblue;
+  color:deepskyblue;
   float:right;
 }
 .button:hover{
-  background-color: #449d44;
+  background-color:deepskyblue;
+  border:1px solid deepskyblue;
   color:white;
 }
 .button_select{
@@ -254,41 +280,66 @@ footer ul li a:hover{
 .button_select:hover{
   background-color: #262626;
 }
-
-.prod_table{
-  margin-top: 40px;
+.button_select_product{
+  background-color: #333333;
+  padding: 0.5em 1.5em;
+  text-transform: uppercase;
+  margin:1em ;
+  border-radius: 4px;
+  text-decoration: none;
+  border:1px solid #67b168;
+  box-shadow: inset 1px 1px 0 #262626;
+  color:white;
+}
+.button_select_product:hover{
+  background-color: #262626;
 }
 
-.prod_table tr th{
-  text-align: center;
-  color: #5e5e5e;
+/* PAGE EDIT*/
+
+.file{
+  button-style:none;
+  background-color: white;
+  border-radius: 4px;
+  color: deepskyblue;
+  border: 1px solid deepskyblue;
+  text-transform: uppercase;
+  font-size: 0.9em;
 }
 
-.table_categories th{
-  background-color: #c1e2b3;
-  color: #2e3436;
-  border: 1px solid white;
-  padding: 1em;
+
+#select_category{
+  width: 250px;
+  height: 2.5em;
+  color: #262626;
+  border: 1px solid #cccccc;
+  background-color: white;
+  border-radius: 4px;
 }
 
-.table_list_products th{
-  border: 1px solid  #c1e2b3
+#tags{
+  width: 250px;
+  height: 6em;
+  color: #262626;
+  border: 1px solid #cccccc;
+  background-color: white;
+  border-radius: 4px;
 }
-
 
 .price-product-total{
   font-weight: bold;
   margin: auto 1em;
 }
-
-.table_histories{
-  background-color: #c1e2b3;
+table .table_histories{
+  background-color: #d9edf7;
   color: #2e3436;
   border: 1px solid white;
   padding: 1em;
 }
-.alert p{
 
+/* MESSAGE ALERTE */
+
+.alert p{
   text-align: center;
 }
 .alert a{
@@ -299,6 +350,8 @@ footer ul li a:hover{
   border-radius: 4px;
   box-shadow: 0px 1px 1px #aaa;
 }
+
+/* CART */
 
 #cart_item{
   background-color: white;
@@ -362,6 +415,8 @@ h4 a:hover{
   background-color: #d43f3a;
   color: white;
 }
+
+/* PAGE COMMAND */
 
 #command{
   background-color: white;

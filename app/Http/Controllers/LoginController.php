@@ -42,7 +42,7 @@ class LoginController extends Controller
 
             } else
             {
-                return back()->withInput($request->only('email', 'remember'))->with(['message'=>trans('app.noAuth'), 'alert'=>'warning']);
+                return back()->withInput($request->only('email', 'remember'))->with(['message'=>'Votre identifiant ou mot de passe ne sont pas valides', 'alert'=>'warning']);
             }
         }
         else

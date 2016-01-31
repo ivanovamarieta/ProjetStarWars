@@ -77,6 +77,6 @@ class CartController extends Controller
     {
             $product=Cart::find($id);
             $product->delete();
-            return back()->with(['message'=>'product deleted']);
+            return back()->with(['message'=>'Produit effacé']);
     }
 }

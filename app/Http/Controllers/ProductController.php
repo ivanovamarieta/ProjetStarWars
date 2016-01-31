@@ -61,7 +61,7 @@ class ProductController extends Controller
             ]);
         }
 
-        return redirect('product')->with(['message'=>'success']);
+        return redirect('product')->with(['message'=>'Success']);
     }
 
     public function changeStatus($id)
@@ -72,7 +72,7 @@ class ProductController extends Controller
 
         $product->save();
 
-        return back()->with(['message'=>trans('app.changeStatus')]);
+        return back()->with(['message'=>'Statut changé']);
     }
 
     public function show($id)
@@ -94,7 +94,7 @@ class ProductController extends Controller
             'name'=>'required|string',
             'abstract'=>'required|max:255',
             'content'=>'max:255',
-            'price'=>'required|decimal(7,2)',  //ici
+            'price'=>'required|numeric',  //ici
             'quantity'=>'numeric',
             'published_at'=>'in:true',
             'status'  => 'in:opened,closed',
@@ -136,7 +136,7 @@ class ProductController extends Controller
         }
 
         $product->update($request->all());
-        return redirect('product')->with(['message'=>'success']);
+        return redirect('product')->with(['message'=>'Success']);
     }
 
     public function destroy($id)
@@ -152,7 +152,7 @@ class ProductController extends Controller
         }
 
         $product->delete();
-        return back()->with(['message'=>'Product deleted']);
+        return back()->with(['message'=>'Produit effacé']);
     }
 }
 
